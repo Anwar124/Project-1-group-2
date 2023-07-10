@@ -19,5 +19,4 @@ document.getElementById("searchForm").addEventListener("submit", function(event)
     } else {
       searchResultsElement.innerHTML = `<p>${searchResults}</p>`;
     }
-  });
-  
+  });  
