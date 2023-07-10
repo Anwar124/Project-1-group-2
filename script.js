@@ -1,18 +1,23 @@
 document.getElementById("searchForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission from refreshing the page
+    event.preventDefault(); 
+  
     
-    // Get the input value
     var searchInput = document.getElementById("searchInput").value;
+  
     
-    // Call the findBook() function from the Library class with the inputted title
     var searchResults = findBook(searchInput);
+  
     
-    // Display the search results
     var searchResultsElement = document.getElementById("searchResults");
     if (searchResults !== "Book not found.") {
-      searchResultsElement.textContent = "Title: " + searchResults.title + ", Author: " + searchResults.author + ", Pages: " + searchResults.pages;
+      searchResultsElement.innerHTML = `
+        <h2>Search Results</h2>
+        <p>Title: ${searchResults.title}</p>
+        <p>Author: ${searchResults.author}</p>
+        <p>Pages: ${searchResults.pages}</p>
+      `;
     } else {
-      searchResultsElement.textContent = searchResults;
+      searchResultsElement.innerHTML = `<p>${searchResults}</p>`;
     }
   });
   
