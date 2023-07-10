@@ -1,5 +1,5 @@
 class Library extends Books {
-  constructor(books)
+  constructor()
   {
     this.books=[];
   }
