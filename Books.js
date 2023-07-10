@@ -9,6 +9,7 @@ class Book {
   read()
   {
     const message="You've started reading "+this.title+" by " +this.author+" It has " +this.pages+ " pages."
+    return message
   }
   
 }

@@ -4,8 +4,8 @@ class Library extends Books {
     this.books=[];
   }
   addBook(title,author,pages){
-    books1= new Book(title,author,pages)
-    this.books.push(books1)
-    return books1
+    books_1= new Book(title,author,pages)
+    this.books.push(books_1)
+    return books_1
   }
 }
