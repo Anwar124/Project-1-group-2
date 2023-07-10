@@ -1,18 +1,32 @@
-class Library extends Books {
+class Book {
+  constructor(title,author,pages)
+  {
+    this.title=title;
+    this.author=author;
+    this.pages=pages;
+
+  }
+  read()
+  {
+    console.log("You've started reading "+this.title+" by "+this.author+" It has " +this.pages+ " pages.")
+  }
+  
+}
+class Library {
   constructor()
   {
     this.books=[];
   }
-  addBook(title, author, pages) {
-    books_1 = new Book(title, author, pages)
-    this.books.push(books_1)
-    console.log(books_1)
-    return books_1
+  addBook(Book) {
+    
+    Book_added = new Book()
+    this.books.push(book_result)
+    console.log(this.books)
   }
   findBook(title) {
     for (i = 0; i < this.books.length; i++) {
-        if (title == this.books[i]) {
-            return this.books[i]
+        if (title == (this.books[i].title) { 
+            book_result().read()
         }
         else {
             console.log('Book not found')
@@ -21,3 +35,4 @@ class Library extends Books {
 }
 
 }
+
