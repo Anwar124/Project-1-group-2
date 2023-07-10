@@ -72,3 +72,16 @@ document.getElementById("searchForm").addEventListener("submit", function (event
     searchResultsElement.innerHTML = `<p>${searchResults}</p>`;
   }
 });
+document.getElementById('add').addEventListener('submit',function AddNewbook(title,author,pages){
+
+ title=document.getElementById('title').value;
+
+ author=document.getElementById('author').value;
+
+ pages=document.getElementById('pages').value;
+
+AddBook = new Book(title,author,pages)
+
+console.log("It is added")
+
+})
