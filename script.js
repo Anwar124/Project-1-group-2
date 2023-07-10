@@ -72,7 +72,7 @@ document.getElementById("searchForm").addEventListener("submit", function (event
     searchResultsElement.innerHTML = `<p>${searchResults}</p>`;
   }
 });
-document.getElementById('add').addEventListener('submit',function AddNewbook(title,author,pages){
+document.getElementById('add').addEventListener('submit', eve
 
  title=document.getElementById('title').value;
 
