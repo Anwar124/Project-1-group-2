@@ -73,19 +73,16 @@ document.getElementById("searchForm").addEventListener("submit", function (event
   }
 });
 
-titlenew=document.getElementById('titlenew').value;
 
-authornew=document.getElementById('authornew').value;
+function addBook() {
+  titlenew=document.getElementById('titlenew').value;
 
-pagesnew=document.getElementById('pagesnew').value;
-function addnewbook(title,author,pages)
-{
+  authornew=document.getElementById('authornew').value;
+  
+  pagesnew=document.getElementById('pagesnew').value;
 
-
-
-AddBook = new Book(title,author,pages)
-
+let newbook=new Book(titlenew,authornew,pagesnew)
 console.log("It is added")
-
+let librarynew= new Library()
+librarynew.addBook(newbook)
 }
-addnewbook(titlenew,author,pagesnew)
