@@ -87,3 +87,14 @@ console.log("It is added")
 library.addBook(newbook)
 console.log(library)
 }
+
+function listappear() {
+  var table= document.getElementById('wrap')
+  var row = table.insertRow()
+  for (var Val of library.libraryBooks)
+  {
+    let cell=row.insertCell();
+    cell.innerHTML=Val;
+  }
+  document.getElementById("list-l1").appendChild(table)
+}
