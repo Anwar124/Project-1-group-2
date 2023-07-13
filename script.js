@@ -35,12 +35,13 @@ class Library {
 
 // var lib = new Library([''])
 
-// var Book1 = new Book('hi', 'hello', 100)
-// var Book2 = new Book('hala', 'kifak', 200)
-// var library = new Library();
+ var Book1 = new Book('hi', 'hello', 100)
+ var Book2 = new Book('hala', 'kifak', 200)
+ var library = new Library();
 // Book1.read();
-// library.addBook(Book1);
-// library.addBook(Book2)
+ library.addBook(Book1);
+ library.addBook(Book2);
+ console.log(library)
 // library.findBook('hi')
 // library.findBook('hello')
 // library.findBook('hello')
@@ -83,6 +84,6 @@ function addBook() {
 
 let newbook=new Book(titlenew,authornew,pagesnew)
 console.log("It is added")
-let librarynew= new Library()
-librarynew.addBook(newbook)
+library.addBook(newbook)
+console.log(library)
 }
