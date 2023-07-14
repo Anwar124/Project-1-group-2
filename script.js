@@ -88,13 +88,15 @@ library.addBook(newbook)
 console.log(library)
 }
 
-function listappear() {
-  var table= document.getElementById('wrap')
-  var row = table.insertRow()
-  for (var Val of library.libraryBooks)
-  {
-    let cell=row.insertCell();
-    cell.innerHTML=Val;
+
+  function createTable() {
+    let table = document.createElement("table");
+    for (let i = 0; i < this.libraryBooks.length; i++) {
+      let row = table.insertRow(i);
+      for (let j = 0; j < this.libraryBooks[i].length; j++) {
+        row.insertCell(j).innerHTML = array[i][j];
+      }
+    }
+  
   }
-  document.getElementById("list-l1").appendChild(table)
-}
+  document.getElementById('list-l1').innerHTML=createTable()
