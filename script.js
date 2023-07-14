@@ -31,6 +31,16 @@ class Library {
     }
     if (increment == this.libraryBooks.length) console.log('Book not found')
   }
+  createTable() {
+    let table = document.createElement("table");
+    for (let i = 0; i < this.libraryBooks.length; i++) {
+      let row = table.insertRow(i);
+      for (let j = 0; j < this.libraryBooks[i].length; j++) {
+        row.insertCell(j).innerHTML = array[i][j];
+      }
+    }
+    document.getElementById('list-l1').innerHTML=createTable()
+  }
 }
 
 // var lib = new Library([''])
@@ -89,14 +99,4 @@ console.log(library)
 }
 
 
-  function createTable() {
-    let table = document.createElement("table");
-    for (let i = 0; i < this.libraryBooks.length; i++) {
-      let row = table.insertRow(i);
-      for (let j = 0; j < this.libraryBooks[i].length; j++) {
-        row.insertCell(j).innerHTML = array[i][j];
-      }
-    }
-  
-  }
-  document.getElementById('list-l1').innerHTML=createTable()
+
